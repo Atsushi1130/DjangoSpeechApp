@@ -1,5 +1,6 @@
-<p>This is template!</p>
-<form action="{% url 'polls:start' %}" method="post">
+<p>開始：文字起こしを開始する</p>
+<p>終了：文字起こしを終了する</p>
+<form action="{% url 'polls:index' %}" method="post">
 {% csrf_token %}
 	<input type="submit" value="開始", name="start_button">
 	<input type="submit" value="終了", name="finish_button">
