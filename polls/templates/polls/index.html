@@ -1,5 +1,6 @@
 <p>This is template!</p>
 <form action="{% url 'polls:start' %}" method="post">
 {% csrf_token %}
-	<input type="submit" value="開始">
+	<input type="submit" value="開始", name="start_button">
+	<input type="submit" value="終了", name="finish_button">
 </form>
