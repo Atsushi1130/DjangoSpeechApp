@@ -14,7 +14,7 @@ INPUT_DEVICE_INDEX = 1      # マイクのチャンネル
 CALL_BACK_FREQUENCY = 3      # コールバック呼び出しの周期[sec]
 
 global OUTPUT_TXT_FILE
-OUTPUT_TXT_FILE = "./" + datetime.now().strftime('%Y%m%d_%H_%M') +".txt" # テキストファイルのファイル名を日付のtxtファイルにする
+OUTPUT_TXT_FILE = "polls/output/" + datetime.now().strftime('%Y%m%d_%H_%M') +".txt" # テキストファイルのファイル名を日付のtxtファイルにする
 
 def look_for_audio_input():
     """
@@ -90,10 +90,10 @@ def realtime_textise():
     stream.close()
     audio.terminate()
 
-def index(request):
-    return render(request, "polls/index.html")
+# def index(request):
+#     return render(request, "polls/index.html")
 
-def start(request):
+def index(request):
 	if request.method == 'POST':
 		if 'start_button' in request.POST:
 			look_for_audio_input()
