@@ -129,9 +129,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-env = environ.Env()
-env.read_env(os.path.join(BASE_DIR, ".env"))
+# env = environ.Env()
+# env.read_env(os.path.join(BASE_DIR, ".env"))
 
-SUPERUSER_NAME = env("SUPERUSER_NAME")
-SUPERUSER_EMAIL = env("SUPERUSER_EMAIL")
-SUPERUSER_PASSWORD = env("SUPERUSER_PASSWORD")
+# SUPERUSER_NAME = env("SUPERUSER_NAME")
+# SUPERUSER_EMAIL = env("SUPERUSER_EMAIL")
+# SUPERUSER_PASSWORD = env("SUPERUSER_PASSWORD")
